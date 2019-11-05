@@ -27,5 +27,14 @@ function showAnswer(eventObj) {
     var image = eventObj.target; //target - ссылка на объект, сгенерировавший событие
     var name = image.id;
     name = "img/" + name + ".jpg";
-    image.src = name;
+    image.src = name;    
+    setTimeout(showBlur, 2000, image);
+}
+
+
+
+function showBlur(image) {
+    var name = image.id;
+    name = name + "blur.jpg"
+    image.src = "img/" + name;
 }
